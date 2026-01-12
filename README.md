@@ -1,2 +1,2 @@
 # catalog-service
-Spring Catalog Service
+Spring Boot Catalog Service
