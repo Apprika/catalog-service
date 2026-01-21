@@ -35,6 +35,8 @@ jobs:
         uses: gradle/actions/setup-gradle@v5
         with:
           build-root-directory: catalog-service
+      - name: Grant execute permission to Gradle wrapper
+        run: chmod +x gradlew
       - name: Build With Gradle
         run: ./gradlew build
       - name: Upload build artifacts
