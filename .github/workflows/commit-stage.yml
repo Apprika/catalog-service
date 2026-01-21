@@ -33,6 +33,8 @@ jobs:
           sarif_file: ${{ steps.scan.outputs.sarif }}
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v5
+        with:
+          build-root-directory: catalog-service
       - name: Build With Gradle
         run: ./gradlew build
       - name: Upload build artifacts
