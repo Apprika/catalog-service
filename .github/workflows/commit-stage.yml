@@ -36,12 +36,19 @@ jobs:
         with:
           build-root-directory: catalog-service
       - name: Grant execute permission to Gradle wrapper
+        working-directory: catalog-service
         run: chmod +x gradlew
       - name: Build With Gradle
+        working-directory: catalog-service
         run: ./gradlew build
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
           name: Package
-          path: build/libs
+          path: catalog-service/build/libs
+      - name: Debug workspace
+        run: |
+          pwd
+          ls -la
+          ls -la catalog-service
 
