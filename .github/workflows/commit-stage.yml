@@ -33,8 +33,6 @@ jobs:
           sarif_file: ${{ steps.scan.outputs.sarif }}
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v5
-        with:
-          build-root-directory: catalog-service
       - name: Grant execute permission to Gradle wrapper
         working-directory: catalog-service
         run: chmod +x gradlew
