@@ -4,14 +4,14 @@ on: push
 jobs:
   build:
     name: Build and Test
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     permissions:
       contents: read
       security-events: write
     steps:
-      - name: Checkout source code
+      - name: Checkout Sources
         uses: actions/checkout@v5
-      - name: Set up JDK
+      - name: Setup Java
         uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -32,8 +32,8 @@ jobs:
         with:
           sarif_file: ${{ steps.scan.outputs.sarif }}
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@017a9effdb900e5b5b2fddfb590a105619dca3c3
-      - name: Build and test
+        uses: gradle/actions/setup-gradle@v5
+      - name: Build With Gradle
         run: ./gradlew build
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
