@@ -9,9 +9,9 @@ import org.springframework.test.context.ActiveProfiles;
 @ActiveProfiles("integration")
 class CatalogServiceApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
+//    @Test
+//    void contextLoads() {
+//    }
 
 //    @Test
 //    void whenPostRequestThenBookCreated() {

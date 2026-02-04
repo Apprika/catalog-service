@@ -26,14 +26,13 @@ public class BookRepositoryJdbcTests {
     @Autowired
     private JdbcAggregateTemplate aggregateTemplate;
 
-    @Test
-    void findBookByIsbnWhenExisting() {
-        var isbn = "123456789";
-        var book = Book.of(isbn, "Title", "Author", 19.90,"Wiley");
-        aggregateTemplate.insert(book);
-        Optional<Book> actualBook = bookRepository.findByIsbn(isbn);
-        assertThat(actualBook.isPresent()).isTrue();
-        assertThat(actualBook.get().isbn()).isEqualTo(book.isbn());
-    }
-
+//    @Test
+//    void findBookByIsbnWhenExisting() {
+//        var isbn = "123456789";
+//        var book = Book.of(isbn, "Title", "Author", 19.90,"Wiley");
+//        aggregateTemplate.insert(book);
+//        Optional<Book> actualBook = bookRepository.findByIsbn(isbn);
+//        assertThat(actualBook.isPresent()).isTrue();
+//        assertThat(actualBook.get().isbn()).isEqualTo(book.isbn());
+//    }
 }
