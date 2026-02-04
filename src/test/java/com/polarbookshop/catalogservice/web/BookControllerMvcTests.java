@@ -21,11 +21,11 @@ public class BookControllerMvcTests {
     @MockitoBean
     private BookService bookService;
 
-    @Test
-    void whenGetBookNotExistingThenShouldReturnNotFound() throws Exception {
+//    @Test
+//    void whenGetBookNotExistingThenShouldReturnNotFound() throws Exception {
 //        String isbn = "1234559";
 //        given(bookService.viewBookDetails(isbn)).willThrow(BookNotFoundException.class);
 //        mockMvc.perform(get("/books/" + isbn)).andExpect(status().isNotFound());
-    }
+//    }
 
 }
