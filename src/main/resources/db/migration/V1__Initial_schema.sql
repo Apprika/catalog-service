@@ -6,6 +6,7 @@ CREATE TABLE book
     isbn               VARCHAR(255) UNIQUE   NOT NULL,
     price              float8                NOT NULL,
     title              VARCHAR(255)          NOT NULL,
+    publisher          varchar(255),
     created_date       TIMESTAMP             NOT NULL,
     last_modified_date TIMESTAMP             NOT NULL,
     version            INTEGER               not null
